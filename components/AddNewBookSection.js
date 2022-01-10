@@ -18,17 +18,17 @@ form.innerHTML = `<input name="title" type="text" placeholder="title" id="title"
 addBookSection.appendChild(addBookSectionTitle);
 addBookSection.appendChild(form);
 
-function saveFormData(book) {
+const saveFormData = (book) => {
   localStorage.setItem('formData', JSON.stringify(book));
-}
+};
 
-function displaySuccess() {
+const displaySuccess = () => {
   const successMsg = document.getElementById('success-msg');
   successMsg.textContent = 'Your book has been added!';
   setTimeout(() => {
     successMsg.textContent = '';
   }, 3000);
-}
+};
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -40,13 +40,13 @@ form.addEventListener('submit', (event) => {
   displaySuccess();
 });
 
-function checkFormData() {
+const checkFormData = () => {
   const { title, author } = form.elements;
   if (localStorage.getItem('formData')) {
     title.value = JSON.parse(localStorage.getItem('formData')).title;
     author.value = JSON.parse(localStorage.getItem('formData')).author;
   }
-}
+};
 
 checkFormData();
 

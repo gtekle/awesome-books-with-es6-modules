@@ -3,11 +3,11 @@ import header from './components/Header.js';
 import main from './components/MainSection.js';
 import footer from './components/Footer.js';
 
-function renderUserInterface() {
+const renderUserInterface = () => {
   document.body.appendChild(header);
   document.body.appendChild(main);
   document.body.appendChild(footer);
-}
+};
 
 window.addEventListener('DOMContentLoaded', () => {
   bookList.checkBooks();

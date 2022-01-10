@@ -1,6 +1,6 @@
 import Book from '../modules/Book.js';
 
-export default function displayBook(book) {
+const displayBook = (book) => {
   const bookHTML = document.createElement('div');
   bookHTML.className = 'book';
   bookHTML.innerHTML = `
@@ -21,4 +21,6 @@ export default function displayBook(book) {
   bookHTML.appendChild(removeBtn);
 
   return bookHTML;
-}
+};
+
+export default displayBook;
