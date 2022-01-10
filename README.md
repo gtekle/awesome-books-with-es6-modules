@@ -14,7 +14,7 @@ It is a project for Microverse's JavaScript Module to be done using pair-program
 
 ![Mobile - Books List Page](./assets/img/awesome-books-home-mobile-version.png)
 
-In this website you can add awesome books of your choice to the list of books and see the existing ones saved in your localstorage object.
+In this website you can add books of your choice to the list of books and save them in your browser's localstorage.
 
 ## Built With
 
@@ -22,15 +22,17 @@ In this website you can add awesome books of your choice to the list of books an
 
 ## Live Demo
 
-- [Live Demo Link](https://gtekle.github.io/awesome-books/)
+- [Live Demo Link](https://gtekle.github.io/awesome-books-with-es6-modules/)
+- Live Demo Might not work due to 'luxon' module. So, you checkout it out by intalling it locally following the steps in 'Getting Started' section.
 
 ## Getting Started
 
 - Install Node.js
 - Install text editor of your choice (eg. VS Code)
-- Clone the repository from [here](https://github.com/gtekle/awesome-books.git)
+- Clone the repository from [here](https://github.com/gtekle/awesome-books-with-es6-modules.git)
+- Change directory to 'cd awesome-books-with-es6-modules'
 - On the root directory, run 'npm install' on the terminal to install packages.
-- Open the index.html file in your browser to check your updates and navigate to other pages.
+- Open the index.html file in your browser (using live server) to check your updates and navigate to other pages.
 
 ## Authors
 
