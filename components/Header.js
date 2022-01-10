@@ -1,3 +1,4 @@
+import { dateTime } from "../modules/Date.js";
 
 const header = document.createElement('header');
 header.id = 'header';
@@ -12,6 +13,6 @@ header.innerHTML = `<div id="logo" class="d-flex row"><img src="./assets/img/log
         <li id="link-contact" class="nav-item"><a class="clickeable">Contact</a></li>
       </ul>
     </nav>
-    <p class="date-time"></p>`;
+    <p class="date-time">${dateTime}</p>`;
 
 export { header }

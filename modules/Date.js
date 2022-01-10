@@ -1,7 +1,5 @@
-import { DateTime } from '../Luxon.js';
+import { DateTime, Info } from '../node_modules/luxon/build/es6/luxon.js';
 
-export const getDate = () => {
-  const now = new DateTime();
-  const currentDate = now.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
-  return currentDate;
-};
+const dateTime = DateTime.now().toFormat('LLL dd yyyy, hh:mm:ss a');
+
+export { dateTime };
