@@ -2,15 +2,17 @@
 import { bookList } from "../modules/BookList.js";
 import { header } from "../components/Header.js";
 import { main } from '../components/MainSection.js';
+import { footer } from '../components/Footer.js';
 
-function populateMainSection() {
+function renderUserInterface() {
   document.body.appendChild(header);
   document.body.appendChild(main);
+  document.body.appendChild(footer);
 }
 
 window.addEventListener('DOMContentLoaded', () => {
   bookList.checkBooks();
-  populateMainSection();
+  renderUserInterface();
 
   const linkItems = document.querySelectorAll('.nav-item');
   linkItems.forEach((item) => {
