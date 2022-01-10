@@ -1,8 +1,7 @@
-/* eslint-disable max-classes-per-file */
-import { bookList } from "../modules/BookList.js";
-import { header } from "../components/Header.js";
-import { main } from '../components/MainSection.js';
-import { footer } from '../components/Footer.js';
+import { bookList } from './modules/BookList.js';
+import header from './components/Header.js';
+import main from './components/MainSection.js';
+import footer from './components/Footer.js';
 
 function renderUserInterface() {
   document.body.appendChild(header);
@@ -16,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const linkItems = document.querySelectorAll('.nav-item');
   linkItems.forEach((item) => {
-    item.addEventListener('click', (e) => {
+    item.addEventListener('click', () => {
       const activeLink = document.getElementById(item.id);
       const activeSection = document.getElementById(item.id.substring(5));
 
@@ -37,4 +36,3 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-

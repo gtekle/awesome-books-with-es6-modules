@@ -1,5 +1,4 @@
-import { bookList } from "../modules/BookList.js";
-import { displayBook } from '../components/BookSection.js';
+import { bookList } from './BookList.js';
 
 export default class Book {
   constructor(title, author) {
@@ -8,27 +7,24 @@ export default class Book {
     this.author = author;
   }
 
-  // eslint-disable-next-line
   * idMaker() {
-    let id;
     if (localStorage.getItem('bookId')) {
-      id = parseInt(localStorage.getItem('bookId'), 10);
+      this.id = parseInt(localStorage.getItem('bookId'), 10);
     } else {
-      id = 0;
+      this.id = 0;
     }
-    while (true) yield (id += 1);
+    while (true) yield (this.id += 1);
   }
 
   addBook() {
     bookList.books.push(this);
     localStorage.setItem('bookId', this.id);
     bookList.saveBooks();
-    displayBook(this);
   }
 
-  // eslint-disable-next-line
   removeBook(id) {
-    bookList.books = bookList.books.filter((book) => book.id !== id);
+    this.id = id;
+    bookList.books = bookList.books.filter((book) => book.id !== this.id);
     bookList.saveBooks();
   }
 }

@@ -1,5 +1,5 @@
-import { bookList } from "../modules/BookList.js";
-import { displayBook } from "./BookSection.js";
+import { bookList } from '../modules/BookList.js';
+import displayBook from './BookSection.js';
 
 const bookListSection = document.createElement('section');
 bookListSection.id = 'list';
@@ -14,10 +14,10 @@ if (bookList.books.length === 0) {
   booksList.appendChild(emptyMessage);
 } else {
   bookList.books.forEach((book) => {
-    displayBook(book)
+    booksList.appendChild(displayBook(book));
   });
 }
 
 bookListSection.appendChild(booksList);
 
-export { bookListSection }
+export default bookListSection;

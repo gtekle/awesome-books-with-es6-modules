@@ -1,4 +1,6 @@
-import Book from "../modules/Book.js";
+import Book from '../modules/Book.js';
+import displayBook from './BookSection.js';
+import { booksList } from './BookListSection.js';
 
 const addBookSection = document.createElement('section');
 const addBookSectionTitle = document.createElement('h2');
@@ -34,6 +36,7 @@ form.addEventListener('submit', (event) => {
   const newBook = new Book(title.value, author.value);
   newBook.addBook();
   saveFormData({ title: title.value, author: author.value });
+  booksList.appendChild(displayBook(newBook));
   displaySuccess();
 });
 
@@ -47,5 +50,4 @@ function checkFormData() {
 
 checkFormData();
 
-
-export { addBookSection };
+export default addBookSection;

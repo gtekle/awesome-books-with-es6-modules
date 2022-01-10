@@ -1,4 +1,4 @@
-import { dateTime } from "../modules/Date.js";
+import dateTime from '../modules/Date.js';
 
 const header = document.createElement('header');
 header.id = 'header';
@@ -15,4 +15,4 @@ header.innerHTML = `<div id="logo" class="d-flex row"><img src="./assets/img/log
     </nav>
     <p class="date-time">${dateTime}</p>`;
 
-export { header }
+export default header;

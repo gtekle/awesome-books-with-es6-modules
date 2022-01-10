@@ -10,4 +10,4 @@ contactSection.innerHTML = `<h2 class="section-title">Contact information</h2>
         <li>Our address: Streetname 22, 84503 City, Country</li>
       </ul>`;
 
-export { contactSection };
+export default contactSection;

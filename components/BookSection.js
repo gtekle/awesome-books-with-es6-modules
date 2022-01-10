@@ -1,7 +1,6 @@
-import { booksList } from "./BookListSection.js";
-import { bookList } from "../modules/BookList.js";
+import Book from '../modules/Book.js';
 
-export function displayBook(book) {
+export default function displayBook(book) {
   const bookHTML = document.createElement('div');
   bookHTML.className = 'book';
   bookHTML.innerHTML = `
@@ -13,14 +12,13 @@ export function displayBook(book) {
   removeBtn.classList.add('btn', 'btn-remove', 'clickeable');
   removeBtn.innerHTML = 'Remove';
 
-  removeBtn.addEventListener('click', (e) => {
-    const targetBookId = parseInt(e.target.id.substring(12), 10);
-    bookList.books = bookList.books.filter((item) => item.id !== targetBookId);
-    bookList.saveBooks();
+  removeBtn.addEventListener('click', () => {
+    const targetBook = new Book();
+    targetBook.removeBook(book.id);
     removeBtn.parentElement.remove();
   });
 
   bookHTML.appendChild(removeBtn);
 
-  booksList.appendChild(bookHTML);
+  return bookHTML;
 }
