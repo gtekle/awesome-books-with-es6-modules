@@ -1,0 +1,221 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Comic Sans MS', 'Comic Sans', sans-serif;
+}
+
+.btn {
+  font-family: 'Comic Sans MS', 'Comic Sans', sans-serif;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+ul {
+  list-style: none;
+}
+
+#header {
+  width: 96%;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border: 2px solid black;
+  margin: 5px auto;
+}
+
+#header img {
+  width: 8%;
+  height: auto;
+}
+
+#nav-list {
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  padding: 0 8px;
+  text-align: center;
+}
+
+.nav-item + .nav-item {
+  border-left: 2px solid black;
+}
+
+.nav-item a:hover {
+  color: blue;
+}
+
+.active {
+  color: red;
+}
+
+.date-time {
+  position: absolute;
+  top: 55px;
+  right: 28px;
+}
+
+#main {
+  min-height: calc(100vh - 110px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 15%;
+  text-align: center;
+}
+
+#main h1 {
+  padding-bottom: 15px;
+}
+
+#list {
+  width: 100%;
+  padding-top: 30px;
+}
+
+.books-container {
+  width: 100%;
+  display: flex;
+  margin: 18px 0;
+  flex-direction: column;
+  border: solid 3px darkgray;
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 7px;
+  font-weight: bold;
+}
+
+.book:nth-child(even) {
+  background-color: rgb(235, 235, 235);
+}
+
+.book:first-child {
+  padding-top: 7px;
+}
+
+.book:last-child {
+  padding-bottom: 7px;
+}
+
+.btn-remove {
+  align-self: flex-end;
+  padding: 3px 7px;
+  border: 1px solid red;
+  box-shadow: 3px 3px 0 0 #7c7c7c;
+  color: red;
+}
+
+.clickeable {
+  cursor: pointer;
+}
+
+#add {
+  padding-top: 30px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#create-form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  gap: 20px;
+}
+
+#create-form input {
+  font-size: 20px;
+  font-family: 'Comic Sans MS', 'Comic Sans', sans-serif;
+  padding: 1px 1px;
+}
+
+#contact {
+  padding-top: 30px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: left;
+}
+
+#contact ul {
+  padding-left: 40px;
+  list-style: disc;
+}
+
+#form-button {
+  font-size: 20px;
+  align-self: flex-end;
+  padding: 3px 7px;
+  border: 1px solid rgb(0, 168, 0);
+  box-shadow: 3px 3px 0 0 #7c7c7c;
+}
+
+#success-msg {
+  color: rgb(0, 219, 0);
+}
+
+.divisor {
+  width: 30%;
+  margin-bottom: 12px;
+  border: none;
+  border-bottom: 2px solid darkgray;
+}
+
+#footer {
+  position: relative;
+  bottom: 0;
+  width: 96%;
+  padding: 10px 20px;
+  border: 2px solid black;
+  margin: 5px auto;
+}
+
+.d-off {
+  display: none;
+}
+
+@media screen and (max-width: 400px) {
+  #header {
+    justify-content: center;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  #main h1 {
+    margin-top: 20px;
+  }
+
+  #contact .section-title {
+    text-align: center;
+  }
+}
